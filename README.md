@@ -10,4 +10,4 @@ serverless functions.
 
 ## License
 
-Cloudeko is licensed under the [LGPL-3.0](LICENSE) license.
+Cloudeko is licensed under the [AGPL-3.0](LICENSE) license.
