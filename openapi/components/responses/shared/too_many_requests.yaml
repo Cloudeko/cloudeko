@@ -1,0 +1,5 @@
+description: API rate limit exceeded
+content:
+  application/json:
+    schema:
+      $ref: "../../schemas/error.yaml"

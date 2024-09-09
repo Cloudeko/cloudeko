@@ -1,0 +1,86 @@
+type: object
+required:
+  - id
+  - aud
+  - role
+  - created_at
+  - updated_at
+  - is_anonymous
+description: >-
+  A user represents an individual interacting with the system. Users can be identified through various means 
+  (username, email, phone) or remain anonymous. The schema stores essential user information, authentication details,
+  and metadata for application-specific and user-defined purposes.
+properties:
+  id:
+    type: string
+    format: uuid
+    example: "123e4567-e89b-12d3-a456-426614174000"
+    description: >-
+      A unique identifier for the user generated using UUID.
+  aud:
+    type: string
+    description: >-
+      Audience claim identifying the intended recipients of the token.
+  role:
+    type: string
+    description: >-
+      The role assigned to the user within the system.
+  username:
+    type: string
+    example: "johndoe123"
+    description: >-
+      The username chosen by the user for identification (optional, one of username, email, or phone must be set for non-anonymous users).
+  email:
+    type: string
+    format: email
+    example: "john@doe.com"
+    description: >-
+      The email address of the user (optional, one of username, email, or phone must be set for non-anonymous users).
+  phone:
+    type: string
+    example: "+1234567890"
+    description: >-
+      The phone number of the user (optional, one of username, email, or phone must be set for non-anonymous users).
+  image:
+    type: string
+    format: uri
+    example: "https://example.com/image.jpg"
+    description: >-
+      The URL of the user's profile image.
+  last_sign_in_at:
+    type: string
+    format: date-time
+    example: "2022-01-01T00:00:00Z"
+    description: >-
+      The date and time when the user last signed in.
+  app_metadata:
+    type: object
+    description: >-
+      JSON object containing application-specific metadata.
+  user_metadata:
+    type: object
+    description: >-
+      JSON object containing user-defined metadata.
+  created_at:
+    type: string
+    format: date-time
+    example: "2022-01-01T00:00:00Z"
+    description: >-
+      The date and time when the user account was created.
+  updated_at:
+    type: string
+    format: date-time
+    example: "2022-01-01T00:00:00Z"
+    description: >-
+      The date and time when the user account was last updated.
+  deleted_at:
+    type: string
+    format: date-time
+    example: "2022-01-01T00:00:00Z"
+    description: >-
+      The date and time when the user account was deleted (null if not deleted).
+  is_anonymous:
+    type: boolean
+    example: false
+    description: >-
+      A flag that indicates whether the user is anonymous.

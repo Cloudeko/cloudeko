@@ -1,0 +1,31 @@
+openapi: 3.0.3
+info:
+  version: 0.0.1
+  title: Cloudeko API
+  contact:
+    name: Cloudeko
+    url: https://www.cloudeko.dev
+    email: support@cloudeko.dev
+  license:
+    name: AGPL-3.0
+    url: https://www.gnu.org/licenses/agpl-3.0.html
+  description: >
+    # Introduction
+    
+    Welcome to the Cloudeko API! You can use our API to access Cloudeko API endpoints.
+externalDocs:
+  description: Find out more about Cloudeko
+  url: https://docs.cloudeko.dev
+servers:
+  - url: https://api.cloudeko.dev
+    description: Production server
+tags:
+  - name: User
+    description: Provides information about the user
+paths:
+  /user:
+    $ref: './paths/user/user.yaml'
+  /admin/user:
+    $ref: './paths/admin/user/user.yaml'
+  /admin/users:
+    $ref: './paths/admin/user/user_{user}.yaml'

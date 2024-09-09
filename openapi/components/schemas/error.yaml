@@ -1,0 +1,19 @@
+type: object
+required:
+  - code
+  - message
+description: >-
+  An error object that can be returned in the response body when an error occurs.
+properties:
+  code:
+    type: string
+    example: "ERR-001"
+    description: >-
+      A unique error code that can be used to identify the error. 
+      This code is intended to be used by developers and should not be displayed to end users.
+  message:
+    type: string
+    example: "Invalid request body"
+    description: >-
+      A human-readable message that describes the error. 
+      This message is intended to be displayed to end users.

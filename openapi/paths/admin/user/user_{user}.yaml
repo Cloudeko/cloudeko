@@ -1,0 +1,77 @@
+get:
+  summary: Get User by ID
+  description: Retrieves the details of a specific user identified by their ID.
+  tags:
+    - User Management (Admin)
+  parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+      required: true
+      description: The ID of the user to retrieve.
+  responses:
+    '200':
+      $ref: "../../../components/responses/user/user.yaml"
+    '401':
+      $ref: "../../../components/responses/shared/unauthorized.yaml"
+    '429':
+      $ref: "../../../components/responses/shared/too_many_requests.yaml"
+    '500':
+      $ref: "../../../components/responses/shared/internal_server_error.yaml"
+    default:
+      $ref: "../../../components/responses/shared/unexpected_error.yaml"
+put:
+  summary: Update User by ID
+  description: Updates the information of a specific user identified by their ID.
+  tags:
+    - User Management (Admin)
+  parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+      required: true
+      description: The ID of the user to update.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/UpdateUser'
+  responses:
+    '200':
+      $ref: "../../../components/responses/user/user.yaml"
+    '400':
+      $ref: "../../../components/responses/shared/bad_request.yaml"
+    '401':
+      $ref: "../../../components/responses/shared/unauthorized.yaml"
+    '429':
+      $ref: "../../../components/responses/shared/too_many_requests.yaml"
+    '500':
+      $ref: "../../../components/responses/shared/internal_server_error.yaml"
+    default:
+      $ref: "../../../components/responses/shared/unexpected_error.yaml"
+delete:
+  summary: Delete User by ID
+  description: Deletes a specific user identified by their ID.
+  tags:
+    - User Management (Admin)
+  parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+      required: true
+      description: The ID of the user to delete.
+  responses:
+    '204':
+      $ref: "../../../components/responses/shared/no_content.yaml"
+    '401':
+      $ref: "../../../components/responses/shared/unauthorized.yaml"
+    '429':
+      $ref: "../../../components/responses/shared/too_many_requests.yaml"
+    '500':
+      $ref: "../../../components/responses/shared/internal_server_error.yaml"
+    default:
+      $ref: "../../../components/responses/shared/unexpected_error.yaml"

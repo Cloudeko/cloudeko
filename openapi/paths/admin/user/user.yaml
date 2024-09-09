@@ -1,0 +1,22 @@
+post:
+  summary: Create a New User (Normal or Admin)
+  description: |
+    Creates a new user. 
+    Requires at least one of the following: `username`, `email`, or `phone` (unless `is_anonymous` is true).
+    `password` is required if `is_anonymous` is false. The `role` field is optional and only used when creating a user via the admin endpoint.
+    Returns the newly created user object upon success.
+  tags:
+    - User Management (Admin)
+  requestBody:
+    $ref: '../../../components/parameters/user/user_create.yaml'
+  responses:
+    '201':
+      $ref: "../../../components/responses/user/user.yaml"
+    '401':
+      $ref: "../../../components/responses/shared/unauthorized.yaml"
+    '429':
+      $ref: "../../../components/responses/shared/too_many_requests.yaml"
+    '500':
+      $ref: "../../../components/responses/shared/internal_server_error.yaml"
+    default:
+      $ref: "../../../components/responses/shared/unexpected_error.yaml"
