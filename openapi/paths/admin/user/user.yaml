@@ -1,5 +1,5 @@
 post:
-  summary: Create a New User (Normal or Admin)
+  summary: Create a New User
   description: |
     Creates a new user. 
     Requires at least one of the following: `username`, `email`, or `phone` (unless `is_anonymous` is true).
@@ -8,7 +8,7 @@ post:
   tags:
     - User Management (Admin)
   requestBody:
-    $ref: '../../../components/parameters/user/user_create.yaml'
+    $ref: '../../../components/parameters/user/user_request.yaml'
   responses:
     '201':
       $ref: "../../../components/responses/user/user.yaml"

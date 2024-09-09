@@ -1,1 +1,3 @@
-redocly bundle control-plane/api-service/src/main/resources/openapi/openapi.yaml --ext yaml -o control-plane/api-service/src/main/resources/openapi/openapi.bundle.yaml
+#!/bin/bash
+
+redocly bundle openapi/openapi.yaml --ext yaml -o openapi/openapi.bundle.yaml

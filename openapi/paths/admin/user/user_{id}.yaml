@@ -4,12 +4,7 @@ get:
   tags:
     - User Management (Admin)
   parameters:
-    - in: path
-      name: id
-      schema:
-        type: string
-      required: true
-      description: The ID of the user to retrieve.
+    - $ref: "../../../components/parameters/user/user_{id}.yaml"
   responses:
     '200':
       $ref: "../../../components/responses/user/user.yaml"
@@ -27,18 +22,9 @@ put:
   tags:
     - User Management (Admin)
   parameters:
-    - in: path
-      name: id
-      schema:
-        type: string
-      required: true
-      description: The ID of the user to update.
+    - $ref: "../../../components/parameters/user/user_{id}.yaml"
   requestBody:
-    required: true
-    content:
-      application/json:
-        schema:
-          $ref: '#/components/schemas/UpdateUser'
+    $ref: "../../../components/parameters/user/user_request.yaml"
   responses:
     '200':
       $ref: "../../../components/responses/user/user.yaml"
@@ -58,12 +44,7 @@ delete:
   tags:
     - User Management (Admin)
   parameters:
-    - in: path
-      name: id
-      schema:
-        type: string
-      required: true
-      description: The ID of the user to delete.
+    - $ref: "../../../components/parameters/user/user_{id}.yaml"
   responses:
     '204':
       $ref: "../../../components/responses/shared/no_content.yaml"

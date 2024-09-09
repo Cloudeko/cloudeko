@@ -2,4 +2,4 @@ required: true
 content:
   application/json:
     schema:
-      $ref: "../../schemas/user/user_create.yaml"
+      $ref: "../../schemas/user/user_request.yaml"

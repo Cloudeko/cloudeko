@@ -28,4 +28,4 @@ paths:
   /admin/user:
     $ref: './paths/admin/user/user.yaml'
   /admin/users:
-    $ref: './paths/admin/user/user_{user}.yaml'
+    $ref: './paths/admin/user/user_{id}.yaml'
