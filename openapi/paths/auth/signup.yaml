@@ -1,0 +1,20 @@
+post:
+  operationId: signup
+  summary: Sign Up
+  description: >-
+    Registers a new user. Returns the newly created user object upon success.
+  tags:
+    - Auth
+  requestBody:
+    $ref: "../../components/parameters/auth/signup_request.yaml"
+  responses:
+    '201':
+      $ref: "../../components/responses/user/user.yaml"
+    '400':
+      $ref: "../../components/responses/shared/bad_request.yaml"
+    '429':
+      $ref: "../../components/responses/shared/too_many_requests.yaml"
+    '500':
+      $ref: "../../components/responses/shared/internal_server_error.yaml"
+    default:
+      $ref: "../../components/responses/shared/unexpected_error.yaml"

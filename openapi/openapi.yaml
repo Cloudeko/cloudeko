@@ -29,6 +29,10 @@ tags:
 paths:
   /user:
     $ref: './paths/user/user.yaml'
+  /auth/signup:
+    $ref: './paths/auth/signup.yaml'
+  /auth/token:
+    $ref: './paths/auth/token.yaml'
   /admin:
     $ref: './paths/admin/admin.yaml'
   /admins:

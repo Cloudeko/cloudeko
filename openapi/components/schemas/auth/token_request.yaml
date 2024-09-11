@@ -1,0 +1,22 @@
+type: object
+description: >-
+  Represents a user login request. The `username`, `email` or`phone` field is required along with the `password` field
+  to authenticate user via credentials. If we have refresh token, we can use that to authenticate user.
+properties:
+  username:
+    type: string
+    description: The username of the user.
+  email:
+    type: string
+    format: email
+    description: The email address of the user.
+  phone:
+    type: string
+    description: The phone number of the user.
+  password:
+    type: string
+    description: The password of the user.
+  refresh_token:
+    type: string
+    description: The refresh token of the user.
+    example: "7b7b7b7b-7b7b-7b7b-7b7b-7b7b7b7b7b7b"

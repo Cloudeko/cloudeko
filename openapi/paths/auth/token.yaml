@@ -1,0 +1,26 @@
+post:
+  operationId: token
+  summary: Get Token
+  description: >-
+    Authenticates a user and returns a token upon successful authentication.
+  tags:
+    - Auth
+  security:
+    - basicAuth: [ ]
+  parameters:
+    - $ref: "../../components/parameters/auth/grant_type.yaml"
+  requestBody:
+    $ref: "../../components/parameters/auth/token_request.yaml"
+  responses:
+    '200':
+      $ref: "../../components/responses/auth/token.yaml"
+    '400':
+      $ref: "../../components/responses/shared/bad_request.yaml"
+    '401':
+      $ref: "../../components/responses/shared/unauthorized.yaml"
+    '429':
+      $ref: "../../components/responses/shared/too_many_requests.yaml"
+    '500':
+      $ref: "../../components/responses/shared/internal_server_error.yaml"
+    default:
+      $ref: "../../components/responses/shared/unexpected_error.yaml"
