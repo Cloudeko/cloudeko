@@ -6,7 +6,7 @@ post:
   tags:
     - Auth
   requestBody:
-    $ref: "../../components/parameters/auth/signup_request.yaml"
+    $ref: "../../components/requests/auth/signup_request.yaml"
   responses:
     '201':
       $ref: "../../components/responses/user/user.yaml"

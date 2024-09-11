@@ -8,7 +8,7 @@ post:
   tags:
     - User Management (Admin)
   requestBody:
-    $ref: '../../../components/parameters/user/user_request.yaml'
+    $ref: '../../../components/requests/user/user_request.yaml'
   responses:
     '201':
       $ref: "../../../components/responses/user/user.yaml"

@@ -26,7 +26,7 @@ patch:
   parameters:
     - $ref: "../../components/parameters/admin/admin_{id}.yaml"
   requestBody:
-    $ref: "../../components/parameters/admin/admin_request.yaml"
+    $ref: "../../components/requests/admin/admin_request.yaml"
   responses:
     '200':
       $ref: "../../components/responses/admin/admin.yaml"

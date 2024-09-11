@@ -5,7 +5,7 @@ post:
   tags:
     - Admin Management (Admin)
   requestBody:
-    $ref: '../../components/parameters/admin/admin_request.yaml'
+    $ref: '../../components/requests/admin/admin_request.yaml'
   responses:
     '201':
       $ref: "../../components/responses/admin/admin.yaml"

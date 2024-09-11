@@ -1,0 +1,16 @@
+required: true
+content:
+  application/json:
+    schema:
+      type: object
+      required:
+        - email
+      description: >-
+        Represents a admin creation request. The `email` field is required and must be set to the email address of the admin user.
+      properties:
+        email:
+          type: string
+          format: email
+          example: "admin@example.com"
+          description: >-
+            The email address of the admin user.

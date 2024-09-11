@@ -1,5 +1,0 @@
-require: true
-content:
-  application/json:
-    schema:
-      $ref: "../../schemas/auth/signup_request.yaml"

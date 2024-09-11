@@ -10,7 +10,7 @@ post:
   parameters:
     - $ref: "../../components/parameters/auth/grant_type.yaml"
   requestBody:
-    $ref: "../../components/parameters/auth/token_request.yaml"
+    $ref: "../../components/requests/auth/token_request.yaml"
   responses:
     '200':
       $ref: "../../components/responses/auth/token.yaml"
