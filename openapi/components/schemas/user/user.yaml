@@ -2,7 +2,6 @@ type: object
 required:
   - id
   - aud
-  - role
   - created_at
   - updated_at
   - is_anonymous

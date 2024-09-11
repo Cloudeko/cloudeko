@@ -8,6 +8,8 @@ get:
   responses:
     '200':
       $ref: "../../../components/responses/user/user.yaml"
+    '404':
+      $ref: "../../../components/responses/shared/not_found.yaml"
     '401':
       $ref: "../../../components/responses/shared/unauthorized.yaml"
     '429':
@@ -16,7 +18,7 @@ get:
       $ref: "../../../components/responses/shared/internal_server_error.yaml"
     default:
       $ref: "../../../components/responses/shared/unexpected_error.yaml"
-put:
+patch:
   summary: Update User by ID
   description: Updates the information of a specific user identified by their ID.
   tags:
@@ -30,6 +32,8 @@ put:
       $ref: "../../../components/responses/user/user.yaml"
     '400':
       $ref: "../../../components/responses/shared/bad_request.yaml"
+    '404':
+      $ref: "../../../components/responses/shared/not_found.yaml"
     '401':
       $ref: "../../../components/responses/shared/unauthorized.yaml"
     '429':
@@ -48,6 +52,8 @@ delete:
   responses:
     '204':
       $ref: "../../../components/responses/shared/no_content.yaml"
+    '404':
+      $ref: "../../../components/responses/shared/not_found.yaml"
     '401':
       $ref: "../../../components/responses/shared/unauthorized.yaml"
     '429':

@@ -1,0 +1,40 @@
+post:
+  summary: Create a New Admin User
+  description: |
+    Creates a new admin user. Returns the newly created admin user object upon success.
+  tags:
+    - Admin Management (Admin)
+  requestBody:
+    $ref: '../../components/parameters/admin/admin_request.yaml'
+  responses:
+    '201':
+      $ref: "../../components/responses/admin/admin.yaml"
+    '401':
+      $ref: "../../components/responses/shared/unauthorized.yaml"
+    '429':
+      $ref: "../../components/responses/shared/too_many_requests.yaml"
+    '500':
+      $ref: "../../components/responses/shared/internal_server_error.yaml"
+    default:
+      $ref: "../../components/responses/shared/unexpected_error.yaml"
+get:
+  summary: List Admin Users
+  description: |
+    Retrieves a list of all admin users.
+    The `limit` and `offset` query parameters can be used to paginate the results.
+  tags:
+    - Admin Management (Admin)
+  parameters:
+    - $ref: '../../components/parameters/shared/offset.yaml'
+    - $ref: '../../components/parameters/shared/limit.yaml'
+  responses:
+    '200':
+      $ref: "../../components/responses/admin/admin_list.yaml"
+    '401':
+      $ref: "../../components/responses/shared/unauthorized.yaml"
+    '429':
+      $ref: "../../components/responses/shared/too_many_requests.yaml"
+    '500':
+      $ref: "../../components/responses/shared/internal_server_error.yaml"
+    default:
+      $ref: "../../components/responses/shared/unexpected_error.yaml"

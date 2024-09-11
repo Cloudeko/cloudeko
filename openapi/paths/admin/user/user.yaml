@@ -20,3 +20,24 @@ post:
       $ref: "../../../components/responses/shared/internal_server_error.yaml"
     default:
       $ref: "../../../components/responses/shared/unexpected_error.yaml"
+get:
+  summary: List Users
+  description: |
+    Retrieves a list of all users.
+    The `limit` and `offset` query parameters can be used to paginate the results.
+  tags:
+    - User Management (Admin)
+  parameters:
+    - $ref: '../../../components/parameters/shared/offset.yaml'
+    - $ref: '../../../components/parameters/shared/limit.yaml'
+  responses:
+    '200':
+      $ref: "../../../components/responses/user/user_list.yaml"
+    '401':
+      $ref: "../../../components/responses/shared/unauthorized.yaml"
+    '429':
+      $ref: "../../../components/responses/shared/too_many_requests.yaml"
+    '500':
+      $ref: "../../../components/responses/shared/internal_server_error.yaml"
+    default:
+      $ref: "../../../components/responses/shared/unexpected_error.yaml"

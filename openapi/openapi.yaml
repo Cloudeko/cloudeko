@@ -22,9 +22,17 @@ servers:
 tags:
   - name: User
     description: Provides information about the user
+  - name: User Management (Admin)
+    description: Provides information about user management
+  - name: Admin Management (Admin)
+    description: Provides information about admin management
 paths:
   /user:
     $ref: './paths/user/user.yaml'
+  /admin:
+    $ref: './paths/admin/admin.yaml'
+  /admins:
+    $ref: './paths/admin/admin_{id}.yaml'
   /admin/user:
     $ref: './paths/admin/user/user.yaml'
   /admin/users:

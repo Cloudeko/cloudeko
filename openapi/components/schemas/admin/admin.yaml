@@ -1,0 +1,34 @@
+type: object
+required:
+  - id
+  - email
+  - created_at
+  - updated_at
+description: >-
+  An admin user represents an individual with elevated privileges within the system, 
+  capable of managing users, content, and configurations.
+properties:
+  id:
+    type: string
+    format: uuid
+    example: "123e4567-e89b-12d3-a456-426614174000"
+    description: >-
+      A unique identifier for the admin user generated using UUID.
+  email:
+    type: string
+    format: email
+    example: "admin@example.com"
+    description: >-
+      The email address of the admin user.
+  created_at:
+    type: string
+    format: date-time
+    example: "2022-01-01T00:00:00Z"
+    description: >-
+      The date and time when the admin user account was created.
+  updated_at:
+    type: string
+    format: date-time
+    example: "2022-01-01T00:00:00Z"
+    description: >-
+      The date and time when the admin user account was last updated.

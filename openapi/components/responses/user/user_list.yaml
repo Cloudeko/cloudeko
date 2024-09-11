@@ -1,0 +1,5 @@
+description: List of users
+content:
+  application/json:
+    schema:
+      $ref: "../../schemas/user/user_list.yaml"

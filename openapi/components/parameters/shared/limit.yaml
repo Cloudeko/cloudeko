@@ -1,0 +1,8 @@
+in: query
+name: limit
+schema:
+  type: integer
+  minimum: 1
+  maximum: 100
+  default: 10
+description: The number of items to retrieve per page. Defaults to 10.
