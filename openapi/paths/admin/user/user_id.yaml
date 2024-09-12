@@ -18,7 +18,7 @@ get:
       $ref: "../../../components/responses/shared/internal_server_error.yaml"
     default:
       $ref: "../../../components/responses/shared/unexpected_error.yaml"
-patch:
+put:
   summary: Update User by ID
   description: Updates the information of a specific user identified by their ID.
   tags:

@@ -19,7 +19,7 @@ get:
       $ref: "../../components/responses/shared/internal_server_error.yaml"
     default:
       $ref: "../../components/responses/shared/unexpected_error.yaml"
-patch:
+put:
   operationId: updateAdmin
   summary: Update Admin by ID
   description: Updates the information of a specific admin user identified by their ID.

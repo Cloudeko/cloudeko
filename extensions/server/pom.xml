@@ -14,28 +14,48 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.openapitools</groupId>
-            <artifactId>openapi-generator</artifactId>
-            <version>${openapi-generator-version}</version>
+            <groupId>jakarta.ws.rs</groupId>
+            <artifactId>jakarta.ws.rs-api</artifactId>
+            <version>${jakarta-version}</version>
         </dependency>
 
         <dependency>
             <groupId>jakarta.annotation</groupId>
             <artifactId>jakarta.annotation-api</artifactId>
-            <version>${version.jakarta-annotation}</version>
-            <!-- scope>provided</scope -->
+            <version>${jakarta-version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>jakarta.ws.rs</groupId>
-            <artifactId>jakarta.ws.rs-api</artifactId>
-            <version>${version.jakarta-ws-rs}</version>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-jaxrs</artifactId>
+            <version>${swagger-core-version}</version>
+            <!-- excluded validation-api:1.1.0.Final due to fact that it doesn't support TYPE_USE,
+for this project used jakarta.validation-api -->
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.validation</groupId>
+                    <artifactId>validation-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
+        <!-- Bean Validation API support -->
         <dependency>
-            <groupId>jakarta.inject</groupId>
-            <artifactId>jakarta.inject-api</artifactId>
-            <version>${version.jta}</version>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+            <version>${beanvalidation-version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>2.9.9</version>
+        </dependency>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.10.13</version>
         </dependency>
     </dependencies>
 
@@ -52,11 +72,34 @@
                         </goals>
                         <configuration>
                             <inputSpec>${project.basedir}/../../openapi/openapi.bundle.yaml</inputSpec>
-                            <generatorName>jaxrs-resteasy</generatorName>
+                            <generatorName>jaxrs-resteasy-eap</generatorName>
                             <configOptions>
                                 <useJakartaEe>true</useJakartaEe>
+                                <useTags>true</useTags>
+                                <serializableModel>true</serializableModel>
                                 <enumUnknownDefaultCase>true</enumUnknownDefaultCase>
+                                <apiPackage>dev.cloudeko.server.api</apiPackage>
+                                <modelPackage>dev.cloudeko.server.api.model</modelPackage>
                             </configOptions>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.9.1</version>
+                <executions>
+                    <execution>
+                        <id>add-source</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>target/generated-sources/openapi/src/gen/java</source>
+                            </sources>
                         </configuration>
                     </execution>
                 </executions>

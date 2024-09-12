@@ -57,9 +57,9 @@ paths:
     $ref: './paths/auth/token.yaml'
   /admin:
     $ref: './paths/admin/admin.yaml'
-  /admins:
+  /admin/{id}:
     $ref: './paths/admin/admin_id.yaml'
   /admin/user:
     $ref: './paths/admin/user/user.yaml'
-  /admin/users:
+  /admin/user/{id}:
     $ref: './paths/admin/user/user_id.yaml'

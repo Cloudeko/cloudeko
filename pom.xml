@@ -30,11 +30,9 @@
         <quarkus.platform.version>${quarkus.version}</quarkus.platform.version>
 
         <!-- specification versions -->
-        <version.cdi>4.0.1</version.cdi>
-        <version.jakarta-annotation>2.1.1</version.jakarta-annotation>
-        <version.jpa>3.1.0</version.jpa>
-        <version.jta>2.0.1</version.jta>
-        <version.jakarta-ws-rs>3.1.0</version.jakarta-ws-rs>
+        <swagger-core-version>1.5.18</swagger-core-version>
+        <beanvalidation-version>3.0.2</beanvalidation-version>
+        <jakarta-version>3.0.0</jakarta-version>
 
         <!-- Various plugin versions -->
         <maven.shade.version>3.5.1</maven.shade.version>
