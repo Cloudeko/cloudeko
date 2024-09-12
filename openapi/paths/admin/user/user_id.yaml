@@ -4,7 +4,7 @@ get:
   tags:
     - User Management (Admin)
   parameters:
-    - $ref: "../../../components/parameters/user/user_{id}.yaml"
+    - $ref: "../../../components/parameters/user/user_id.yaml"
   responses:
     '200':
       $ref: "../../../components/responses/user/user.yaml"
@@ -24,7 +24,7 @@ patch:
   tags:
     - User Management (Admin)
   parameters:
-    - $ref: "../../../components/parameters/user/user_{id}.yaml"
+    - $ref: "../../../components/parameters/user/user_id.yaml"
   requestBody:
     $ref: "../../../components/requests/user/user_request.yaml"
   responses:
@@ -48,7 +48,7 @@ delete:
   tags:
     - User Management (Admin)
   parameters:
-    - $ref: "../../../components/parameters/user/user_{id}.yaml"
+    - $ref: "../../../components/parameters/user/user_id.yaml"
   responses:
     '204':
       $ref: "../../../components/responses/shared/no_content.yaml"

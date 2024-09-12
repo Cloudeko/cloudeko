@@ -2,8 +2,4 @@ in: query
 name: grant_type
 description: The grant type to use for authentication.
 schema:
-  type: string
-  enum:
-    - password
-    - refresh_token
-  default: password
+  $ref: '../../schemas/auth/grant_type.yaml'

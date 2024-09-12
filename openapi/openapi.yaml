@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  version: 0.0.1
+  version: 0.1.0
   title: Cloudeko API
   contact:
     name: Cloudeko
@@ -9,35 +9,57 @@ info:
   license:
     name: AGPL-3.0
     url: https://www.gnu.org/licenses/agpl-3.0.html
-  description: >
-    # Introduction
-    
-    Welcome to the Cloudeko API! You can use our API to access Cloudeko API endpoints.
-externalDocs:
-  description: Find out more about Cloudeko
-  url: https://docs.cloudeko.dev
+  description: |
+    # Cloudeko API
+
+    The Cloudeko API provides programmatic access to your self-hosted Cloudeko instance, enabling you to interact with its core features like user management, authentication, and administration. 
+
+    **Key Features:**
+
+    * **User Management:** Create, retrieve, update, and delete user accounts, including support for anonymous users.
+    * **Admin Management:** Manage administrator accounts with elevated privileges.
+    * **Authentication:** Securely authenticate users and obtain access tokens.
+
+    **About Cloudeko:**
+
+    * Cloudeko is a self-hosted, open-source backend platform. 
+    * Built with Quarkus for high performance and efficiency. 
+    * Designed to provide essential backend capabilities for your applications.
+
+    **Important Notes:**
+
+    * This API adheres to the AGPL-3.0 license. Please review the license terms carefully before using the API.
+    * API rate limits may apply. Please refer to the documentation for details.
+
 servers:
-  - url: https://api.cloudeko.dev
+  - url: https://api.cloudeko.dev/v1
     description: Production server
+
 tags:
   - name: User
-    description: Provides information about the user
+    description: Endpoints for managing user information and actions.
+  - name: Authentication
+    description: Endpoints for authenticating users and obtaining access tokens.
   - name: User Management (Admin)
-    description: Provides information about user management
+    description: Endpoints for administrators to manage user accounts and access.
   - name: Admin Management (Admin)
-    description: Provides information about admin management
+    description: Endpoints for administrators to manage other administrator accounts.
+
+externalDocs:
+  description: Find out more about Cloudeko and its API in our comprehensive documentation.
+  url: https://docs.cloudeko.dev
 paths:
   /user:
     $ref: './paths/user/user.yaml'
-  /auth/signup:
-    $ref: './paths/auth/signup.yaml'
+  /auth:
+    $ref: './paths/auth/auth.yaml'
   /auth/token:
     $ref: './paths/auth/token.yaml'
   /admin:
     $ref: './paths/admin/admin.yaml'
   /admins:
-    $ref: './paths/admin/admin_{id}.yaml'
+    $ref: './paths/admin/admin_id.yaml'
   /admin/user:
     $ref: './paths/admin/user/user.yaml'
   /admin/users:
-    $ref: './paths/admin/user/user_{id}.yaml'
+    $ref: './paths/admin/user/user_id.yaml'

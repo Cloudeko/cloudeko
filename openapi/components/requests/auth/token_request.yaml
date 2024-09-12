@@ -1,4 +1,3 @@
-require: true
 content:
   application/json:
     schema:
@@ -23,4 +22,3 @@ content:
         refresh_token:
           type: string
           description: The refresh token of the user.
-          example: "7b7b7b7b-7b7b-7b7b-7b7b-7b7b7b7b7b7b"

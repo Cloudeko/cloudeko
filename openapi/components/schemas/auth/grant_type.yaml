@@ -1,0 +1,6 @@
+type: string
+# We don't specify the enum as there is currently bug in the OpenAPI generator that doesn't allow us to specify the enum values in the schema
+#default: password
+#enum:
+#  - password
+#  - refresh_token

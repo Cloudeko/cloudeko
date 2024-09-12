@@ -29,29 +29,25 @@
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <quarkus.platform.version>${quarkus.version}</quarkus.platform.version>
 
+        <!-- specification versions -->
+        <version.cdi>4.0.1</version.cdi>
+        <version.jakarta-annotation>2.1.1</version.jakarta-annotation>
+        <version.jpa>3.1.0</version.jpa>
+        <version.jta>2.0.1</version.jta>
+        <version.jakarta-ws-rs>3.1.0</version.jakarta-ws-rs>
+
         <!-- Various plugin versions -->
         <maven.shade.version>3.5.1</maven.shade.version>
         <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
         <org.projectlombok.version>1.18.30</org.projectlombok.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <openapi-generator-version>7.8.0</openapi-generator-version>
         <spotless.version>2.40.0</spotless.version>
         <mutiny.version>2.5.1</mutiny.version>
         <os-maven-plugin.version>1.7.0</os-maven-plugin.version>
         <version.org.jboss.logging>3.5.3.Final</version.org.jboss.logging>
         <surefire-plugin.version>3.1.2</surefire-plugin.version>
     </properties>
-
-    <!-- Repository declarations -->
-    <repositories>
-        <repository>
-            <id>sonatype</id>
-            <url>https://oss.sonatype.org/content/groups/public/</url>
-        </repository>
-        <repository>
-            <id>flowpowered</id>
-            <url>https://repo.rapture.pw/repository/maven-releases/</url>
-        </repository>
-    </repositories>
 
     <dependencyManagement>
         <dependencies>

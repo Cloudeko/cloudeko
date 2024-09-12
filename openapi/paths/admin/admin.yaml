@@ -1,4 +1,5 @@
 post:
+  operationId: createAdmin
   summary: Create a New Admin User
   description: |
     Creates a new admin user. Returns the newly created admin user object upon success.
@@ -18,6 +19,7 @@ post:
     default:
       $ref: "../../components/responses/shared/unexpected_error.yaml"
 get:
+  operationId: listAdmins
   summary: List Admin Users
   description: |
     Retrieves a list of all admin users.

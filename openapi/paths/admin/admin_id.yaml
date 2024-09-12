@@ -1,10 +1,11 @@
 get:
+  operationId: getAdmin
   summary: Get Admin by ID
   description: Retrieves the details of a specific admin user identified by their ID.
   tags:
     - Admin Management (Admin)
   parameters:
-    - $ref: "../../components/parameters/admin/admin_{id}.yaml"
+    - $ref: "../../components/parameters/admin/admin_id.yaml"
   responses:
     '200':
       $ref: "../../components/responses/admin/admin.yaml"
@@ -19,12 +20,13 @@ get:
     default:
       $ref: "../../components/responses/shared/unexpected_error.yaml"
 patch:
+  operationId: updateAdmin
   summary: Update Admin by ID
   description: Updates the information of a specific admin user identified by their ID.
   tags:
     - Admin Management (Admin)
   parameters:
-    - $ref: "../../components/parameters/admin/admin_{id}.yaml"
+    - $ref: "../../components/parameters/admin/admin_id.yaml"
   requestBody:
     $ref: "../../components/requests/admin/admin_request.yaml"
   responses:
@@ -43,12 +45,13 @@ patch:
     default:
       $ref: "../../components/responses/shared/unexpected_error.yaml"
 delete:
+  operationId: deleteAdmin
   summary: Delete Admin by ID
   description: Deletes a specific admin user identified by their ID.
   tags:
     - Admin Management (Admin)
   parameters:
-    - $ref: "../../components/parameters/admin/admin_{id}.yaml"
+    - $ref: "../../components/parameters/admin/admin_id.yaml"
   responses:
     '204':
       $ref: "../../components/responses/shared/no_content.yaml"
