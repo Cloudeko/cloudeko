@@ -2,4 +2,6 @@ description: Successfully retrieved user's information.
 content:
   application/json:
     schema:
-      $ref: "../../schemas/user/user.yaml"
+      properties:
+        user:
+          $ref: "../../schemas/user/user.yaml"

@@ -1,5 +1,8 @@
-description: Unauthorized
+description: Unauthorized error response
 content:
   application/json:
     schema:
       $ref: "../../schemas/error.yaml"
+    example:
+      code: unauthorized
+      message: You are not authorized to perform this action

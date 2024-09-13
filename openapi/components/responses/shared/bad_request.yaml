@@ -1,5 +1,8 @@
-description: Bad request
+description: Bad request response
 content:
   application/json:
     schema:
       $ref: "../../schemas/error.yaml"
+    example:
+      code: bad_request
+      message: The request was invalid or cannot be served

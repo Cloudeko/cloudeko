@@ -2,4 +2,6 @@ description: List of users
 content:
   application/json:
     schema:
-      $ref: "../../schemas/user/user_list.yaml"
+      properties:
+        users:
+          $ref: "../../schemas/user/user_list.yaml"

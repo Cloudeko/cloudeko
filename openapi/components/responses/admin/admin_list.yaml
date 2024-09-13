@@ -2,4 +2,6 @@ description: List of admin users response
 content:
   application/json:
     schema:
-      $ref: "../../schemas/admin/admin_list.yaml"
+      properties:
+        admins:
+          $ref: "../../schemas/admin/admin_list.yaml"

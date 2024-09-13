@@ -1,5 +1,8 @@
-description: API rate limit exceeded
+description: API rate limit exceeded response
 content:
   application/json:
     schema:
       $ref: "../../schemas/error.yaml"
+    example:
+      code: too_many_requests
+      message: API rate limit exceeded

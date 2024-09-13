@@ -1,5 +1,8 @@
-description: An unexpected error occurred
+description: Unexpected error response
 content:
   application/json:
     schema:
       $ref: "../../schemas/error.yaml"
+    example:
+      code: example_error
+      message: A detailed error message

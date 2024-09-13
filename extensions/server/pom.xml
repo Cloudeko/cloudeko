@@ -73,6 +73,13 @@ for this project used jakarta.validation-api -->
                         <configuration>
                             <inputSpec>${project.basedir}/../../openapi/openapi.bundle.yaml</inputSpec>
                             <generatorName>jaxrs-resteasy-eap</generatorName>
+                            <apiNameSuffix>ResourceBase</apiNameSuffix>
+                            <modelNameMappings>
+                                <modelNameMapping>getCurrentUser_200_response=UserResponse</modelNameMapping>
+                                <modelNameMapping>listUsers_200_response=ListUserResponse</modelNameMapping>
+                                <modelNameMapping>createAdmin_201_response=AdminResponse</modelNameMapping>
+                                <modelNameMapping>listAdmins_200_response=ListAdminResponse</modelNameMapping>
+                            </modelNameMappings>
                             <configOptions>
                                 <useJakartaEe>true</useJakartaEe>
                                 <useTags>true</useTags>

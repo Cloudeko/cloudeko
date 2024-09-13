@@ -2,4 +2,6 @@ description: Admin user response
 content:
   application/json:
     schema:
-      $ref: "../../schemas/admin/admin.yaml"
+      properties:
+        admin:
+          $ref: "../../schemas/admin/admin.yaml"

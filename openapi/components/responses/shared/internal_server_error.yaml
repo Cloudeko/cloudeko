@@ -1,5 +1,8 @@
-description: Internal server error
+description: Internal server error response
 content:
   application/json:
     schema:
       $ref: "../../schemas/error.yaml"
+    example:
+      code: internal_server_error
+      message: An unexpected error occurred
