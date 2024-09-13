@@ -7,8 +7,8 @@ info:
     url: https://www.cloudeko.dev
     email: support@cloudeko.dev
   license:
-    name: AGPL-3.0
-    url: https://www.gnu.org/licenses/agpl-3.0.html
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
   description: |
     # Cloudeko API
 
@@ -28,7 +28,7 @@ info:
 
     **Important Notes:**
 
-    * This API adheres to the AGPL-3.0 license. Please review the license terms carefully before using the API.
+    * This API adheres to the Apache 2.0 license. Please review the license terms carefully before using the API.
     * API rate limits may apply. Please refer to the documentation for details.
 
 servers:
