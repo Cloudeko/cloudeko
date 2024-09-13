@@ -1,4 +1,5 @@
 get:
+  operationId: getUser
   summary: Get User by ID
   description: Retrieves the details of a specific user identified by their ID.
   tags:
@@ -19,6 +20,7 @@ get:
     default:
       $ref: "../../../components/responses/shared/unexpected_error.yaml"
 put:
+  operationId: updateUser
   summary: Update User by ID
   description: Updates the information of a specific user identified by their ID.
   tags:
@@ -43,6 +45,7 @@ put:
     default:
       $ref: "../../../components/responses/shared/unexpected_error.yaml"
 delete:
+  operationId: deleteUser
   summary: Delete User by ID
   description: Deletes a specific user identified by their ID.
   tags:

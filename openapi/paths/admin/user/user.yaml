@@ -1,4 +1,5 @@
 post:
+  operationId: createUser
   summary: Create a New User
   description: |
     Creates a new user. 
@@ -21,6 +22,7 @@ post:
     default:
       $ref: "../../../components/responses/shared/unexpected_error.yaml"
 get:
+  operationId: listUsers
   summary: List Users
   description: |
     Retrieves a list of all users.
